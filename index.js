@@ -82,4 +82,13 @@ Communicator.prototype.offersAddToTrip = function(buyId, callback){
         .catch(error, callback(error, null))
 }
 
+Communicator.prototype.offersRules = function(buyId, callback){
+
+    this.$client.get('/offers/' + buyId + '/rules')
+        .then(response => callback(null, response.data))
+        .catch(error, callback(error, null))
+}
+
+
+
 module.exports = Communicator
