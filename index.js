@@ -54,6 +54,13 @@ Communicator.prototype.offersSegment = function(segmentId, callback){
         .catch(error => callback(error, null))
 }
 
+Communicator.prototype.offersAvailability = function(buyId, callback){
+
+    this.$client.get('/offers/' + buyId + '/availability')
+        .then(response => callback(null, response.data))
+        .catch(error, callback(error, null))
+}
+
 
 
 module.exports = Communicator
