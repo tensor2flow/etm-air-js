@@ -1,0 +1,29 @@
+{
+  "name": "etm-js",
+  "version": "1.0.0",
+  "description": "The ctm.etm-system.com integration package",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tensor2flow/etm-js.git"
+  },
+  "keywords": [
+    "ETM",
+    "system",
+    "com",
+    "avia",
+    "ticket",
+    "booking",
+    "api",
+    "package"
+  ],
+  "author": "Firdavs Beknazarov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tensor2flow/etm-js/issues"
+  },
+  "homepage": "https://github.com/tensor2flow/etm-js#readme"
+}
