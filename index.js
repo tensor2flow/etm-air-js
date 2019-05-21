@@ -14,6 +14,27 @@ const Communicator = function(options){
     })
 }
 
+/** Method for getting airlines
+ * @example
+ * const etm = require('etm-air')
+ * etm.airlines((error, airlines) => {
+ *      if(error){
+ *          throw error
+ *      }
+ *      else{
+ *          console.log(airlines)
+ *      }
+ * })
+ */
+Communicator.prototype.airlines = function(callback){
+    assert(callback, 'Missing callback')
+    assert(typeof callback !== 'function', 'Callback should be a function')
+
+    this.$client.get('/airlines')
+        .then( response => callback(null, response.data) )
+        .catch( error => callback(error, null) )
+}
+
 
 
 module.exports = Communicator
