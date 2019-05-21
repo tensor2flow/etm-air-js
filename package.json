@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/tensor2flow/etm-js/issues"
   },
-  "homepage": "https://github.com/tensor2flow/etm-js#readme"
+  "homepage": "https://github.com/tensor2flow/etm-js#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
