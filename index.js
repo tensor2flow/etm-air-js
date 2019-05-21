@@ -104,5 +104,4 @@ Communicator.prototype.offersSeats = function(segmentId, callback){
         .catch(error, callback(error, null))
 }
 
-
 module.exports = Communicator
