@@ -90,5 +90,12 @@ Communicator.prototype.offersRules = function(buyId, callback){
 }
 
 
+Communicator.prototype.offersServices = function(buyId, callback){
+
+    this.$client.get('/offers/' + buyId + '/services')
+        .then(response => callback(null, response.data))
+        .catch(error, callback(error, null))
+}
+
 
 module.exports = Communicator
