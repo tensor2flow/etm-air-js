@@ -97,5 +97,12 @@ Communicator.prototype.offersServices = function(buyId, callback){
         .catch(error, callback(error, null))
 }
 
+Communicator.prototype.offersSeats = function(segmentId, callback){
+
+    this.$client.get('/offers/' + segmentId + '/seats')
+        .then(response => callback(null, response.data))
+        .catch(error, callback(error, null))
+}
+
 
 module.exports = Communicator
