@@ -45,6 +45,15 @@ Communicator.prototype.offers = function(callback){
         .catch(error => callback(error, null))
 }
 
+Communicator.prototype.offersSegment = function(segmentId, callback){
+    assert(callback, 'Missing callback')
+    assert(typeof callback !== 'function', 'Callback should be a function')
+
+    this.$client.get('/offers' + segmentId)
+        .then(response => callback(null, response.data))
+        .catch(error => callback(error, null))
+}
+
 
 
 module.exports = Communicator
