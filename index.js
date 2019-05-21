@@ -68,6 +68,13 @@ Communicator.prototype.offersFireFamily = function(buyId, callback){
         .catch(error, callback(error, null))
 }
 
+Communicator.prototype.offersOtherPrice = function(buyId, callback){
+
+    this.$client.get('/offers/' + buyId + '/other-price')
+        .then(response => callback(null, response.data))
+        .catch(error, callback(error, null))
+}
+
 
 
 module.exports = Communicator
