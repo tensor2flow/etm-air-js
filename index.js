@@ -75,6 +75,11 @@ Communicator.prototype.offersOtherPrice = function(buyId, callback){
         .catch(error, callback(error, null))
 }
 
+Communicator.prototype.offersAddToTrip = function(buyId, callback){
 
+    this.$client.post('/offers/' + buyId + '/add_to_trip')
+        .then(response => callback(null, response.data))
+        .catch(error, callback(error, null))
+}
 
 module.exports = Communicator
